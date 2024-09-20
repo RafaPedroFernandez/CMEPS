@@ -33,6 +33,12 @@ module shr_drydep_mod
   integer, public,  parameter :: NLUse = 11                ! Number of land-use types
   integer, private, protected :: NHen
 
+! !rpf_CESM3_SLH: n_species_table was fixed in previous versions
+! ! integer, public,  parameter :: n_species_table = 192     ! Number of species to work with
+!   integer, public,  parameter :: n_species_table = 215     ! rpf_CESM2_SLH - Add SLH (nat + ant)
+! !rpf_CESM3_SLH: n_species_table was fixed in previous versions
+
+
   ! public data members:
 
   real(r8), public, parameter :: ph     = 1.e-5_r8         ! measure of the acidity (dimensionless)
@@ -489,6 +495,10 @@ CONTAINS
                 test_name = 'OX'  ! this is just a place holder. values are explicitly set below
              case( 'SOAM', 'SOAI', 'SOAT', 'SOAB', 'SOAX' )
                 test_name = 'OX'  ! this is just a place holder. values are explicitly set below
+!rpf_CESM2_SLH
+             case( 'HCL','HOCL','CLONO2','HBR','HOBR','BRONO2','HI','HOI','IONO2','INO2','I2O2','I2O3','I2O4','BR2','CHCL2O2','COCL2' )
+                test_name = 'OX'  ! This is just a place holder. Dry deposition velocities are explicitly set in 'mo_drydep'.
+!rpf_CESM2_SLH
              case( 'SOAGbb0' )
                 test_name = 'SOAGff0'
              case( 'SOAGbb1' )
