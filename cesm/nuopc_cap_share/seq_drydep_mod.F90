@@ -1,6 +1,10 @@
 module seq_drydep_mod
 
   use shr_drydep_mod, only: seq_drydep_setHCoeff=>shr_drydep_setHCoeff
+!rpf_CESM3_SLH testing cam_cesm2_2_rel_09_slh
+  use shr_drydep_mod, only: shr_drydep_readnl
+!rpf_CESM3_SLH testing cam_cesm2_2_rel_09_slh
+
   implicit none
 
   ! method specification
