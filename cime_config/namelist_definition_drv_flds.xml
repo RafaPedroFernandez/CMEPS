@@ -63,7 +63,7 @@
   <!-- ========================================================================================  -->
 
   <!-- CESM3_SLH Testing RPF  -->
-  <entry id="drydep_method">
+<!--  <entry id="drydep_method">
     <type>char</type>
     <category>dry-deposition</category>
     <group>drydep_inparm</group>
@@ -76,7 +76,7 @@
       'xactive_atm' - interactive method in CAM
       'xactive_lnd' - interactive method in CLM
     </desc>
-  </entry>
+  </entry>-->
   <!-- CESM3_SLH Testing RPF  -->
 
   <entry id="drydep_list">
